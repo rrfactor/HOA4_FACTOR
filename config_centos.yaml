@@ -3,7 +3,7 @@
   become: true
   pre_tasks:
 
-  - name: Update Repository Index (Ubuntu)
+  - name: Update Repository Index (CentOS)
     tags: always
     yum:
       update_cache: yes
