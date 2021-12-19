@@ -1,0 +1,15 @@
+---
+- hosts: centos
+  become: true
+  pre_tasks:
+
+  - name: Update Repository Index (Ubuntu)
+    tags: always
+    yum:
+      update_cache: yes
+    changed_when: false
+  
+- hosts: centos
+  become: true
+  roles:
+    - elk_centos
