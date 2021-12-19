@@ -10,15 +10,20 @@
 #ELK Dependencies <END>
 
 #Elasticsearch Installation <START>
-- name: Get GPG Key (CentOs)
+- name: install elasticsearch rpm key
   rpm_key:
+    key: https://artifacts.elastic.co/GPG-KEY-elasticsearch
     state: present
-    url: https://artifacts.elastic.co/GPG-KEY-elasticsearch
+  become: true
 
-- name: Install Elasticsearch repository into sources list (CentOs)
+- name: install elasticsearch 7.x rpm repository
   yum_repository:
-    repo: deb https://artifacts.elastic.co/packages/7.x/yum
-    state: present
+    name: Elastic_7.X_repo
+    baseurl: https://artifacts.elastic.co/packages/7.x/yum
+    gpgcheck: true
+    gpgkey: https://artifacts.elastic.co/GPG-KEY-elasticsearch
+    description: Elastic 7.X Repo
+  become: true
 
 - name: Install Elasticsearch (CentOs)
   yum:
