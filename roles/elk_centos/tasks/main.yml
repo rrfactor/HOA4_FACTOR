@@ -3,11 +3,7 @@
   yum:
     name:
       - java-11-openjdk
-      - yum-transport-https
       - curl
-      - gpgv
-      - gpgsm
-      - gnupg-l10n
       - gnupg 
       - dirmngr
     state: latest
