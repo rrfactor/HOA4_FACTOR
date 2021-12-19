@@ -14,7 +14,7 @@
 #ELK Dependencies <END>
 
 #Elasticsearch Installation <START>
-- name: Get PGP Key (CentOs)
+- name: Get GPG Key (CentOs)
   rpm_key:
     url: https://artifacts.elastic.co/GPG-KEY-elasticsearch
     state: present
