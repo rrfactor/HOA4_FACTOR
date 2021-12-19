@@ -12,9 +12,8 @@
 #Elasticsearch Installation <START>
 - name: Get GPG Key (CentOs)
   rpm_key:
-    url: https://artifacts.elastic.co/GPG-KEY-elasticsearch
     state: present
-    validate_certs: yes
+    url: https://artifacts.elastic.co/GPG-KEY-elasticsearch
 
 - name: Install Elasticsearch repository into sources list (CentOs)
   yum_repository:
