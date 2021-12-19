@@ -1,5 +1,6 @@
 ---
 - hosts: ubuntu
+  become: true
   pre_tasks:
 
   - name: Update Repository Index (Ubuntu)
@@ -9,5 +10,6 @@
     changed_when: false
   
 - hosts: ubuntu
+  become: true
   roles:
     - elk
