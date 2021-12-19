@@ -3,7 +3,7 @@
   yum:
     name:
       - java-11-openjdk
-      - apt-transport-https
+      - yum-transport-https
       - curl
       - gpgv
       - gpgsm
