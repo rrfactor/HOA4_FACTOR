@@ -1,7 +1,7 @@
 ---
 - name: install nagios reqs
-    apt:
-      name: 
+  apt:
+    name: 
         - autoconf
         - gcc
         - libc6
@@ -14,7 +14,7 @@
         - libapache2-mod-php*
         - libgd-dev
         - build-essential
-      state: latest
-      force: true
-      update_cache: true
+    state: latest
+    force: true
+    update_cache: true
     become: true
