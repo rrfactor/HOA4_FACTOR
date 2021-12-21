@@ -1,5 +1,5 @@
 ---
-mysql_root_password: "P@ssw0rd"
+mysql_root_password: "abc123"
 app_user: "apache"
 http_host: "lamp.example.com"
 http_conf: "lamp.example.com.conf"
