@@ -1,20 +1,31 @@
 ---
-- name: install nagios reqs
-  apt:
-    name: 
-        - autoconf
-        - gcc
-        - libc6
-        - make
-        - wget
-        - unzip
-        - libssl-dev
-        - apache2
-        - php
-        - libapache2-mod-php*
-        - libgd-dev
-        - build-essential
+- name: Install any necessary dependencies [Debian/Ubuntu]
+  apt: 
+    name:
+      - python-httplib2
+      - python-apt
+      - curl
+      - apt-transport-https
+    state: present 
+    update_cache: yes 
+    cache_valid_time: 3600
+    
+- name: Install any necessary PIP dependencies [Debian/Ubuntu]
+  apt: 
+    name: python-pip
+    state: present 
+    update_cache: yes 
+    cache_valid_time: 3600
+
+- name: Import InfluxData GPG signing key [Debian/Ubuntu]
+  apt_key:
+    url: https://repos.influxdata.com/influxdb.key
+    state: present
+  when: influxdb_install_url is not defined or influxdb_install_url == None
+
+- name: Install InfluxDB packages [Debian/Ubuntu]
+  apt: 
+    name: influxdb
     state: latest
-    force: true
-    update_cache: true
-    become: true
+    update_cache: yes
+    cache_valid_time: 3600
