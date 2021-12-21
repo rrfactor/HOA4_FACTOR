@@ -16,5 +16,5 @@
       - build-essential
     state: latest
     update_cache: yes
-- name: Download and uncompress nagios
+- name: Download and start nagios
   shell: cd /tmp;rm nagios*.tar.gz;wget -O nagios.tar.gz --no-check-certificate https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.4.5.tar.gz;tar -zxf nagios.tar.gz;mv nagios-4.4.5 nagios
