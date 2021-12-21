@@ -1,7 +1,7 @@
 ---
 - name: install nagios reqs
-    apt:
-      name: 
+  apt:
+  name: 
         - autoconf
         - gcc
         - libc6
