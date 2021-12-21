@@ -1,2 +1,10 @@
 ---
-
+- name: configure lamp
+  hosts: ubuntu
+  become: yes
+  become_method: sudo
+  vars_files:
+    - vars/default.yml
+  roles:
+    - apache
+    - mariadb
