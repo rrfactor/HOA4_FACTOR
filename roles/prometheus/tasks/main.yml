@@ -20,10 +20,6 @@
     owner: prometheus
     group: prometheus
     mode: 0755
-- name: prometheus configuration file
-  template:
-    src: "files/prometheus.yaml.j2"
-    dest: "/etc/prometheus/prometheus.yaml"
 - name: start prometheus
   systemd:
     name: prometheus
