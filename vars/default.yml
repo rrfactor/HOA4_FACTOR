@@ -1,7 +1,7 @@
 ---
 mysql_root_password: "abc123"
 app_user: "apache"
-http_host: "lamp.example.com"
-http_conf: "lamp.example.com.conf"
+http_host: "lampexample.com"
+http_conf: "lampexample.com.conf"
 http_port: "80"
 disable_default: true
