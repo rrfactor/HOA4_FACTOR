@@ -1,2 +1,6 @@
 ---
-
+- name: install monitoring stack
+  hosts: ubuntu
+  become: yes
+  roles:
+  - prometheus
