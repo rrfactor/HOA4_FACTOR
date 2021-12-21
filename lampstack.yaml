@@ -6,5 +6,5 @@
   vars_files:
     - vars/default.yml
   roles:
-    - apache
+    - apache_and_php
     - mariadb
