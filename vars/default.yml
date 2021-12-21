@@ -1,6 +1,6 @@
 ---
 mysql_root_password: "abc123"
-app_user: "apache"
+app_user: "rynrssl"
 http_host: "lampexample.com"
 http_conf: "lampexample.com.conf"
 http_port: "80"
