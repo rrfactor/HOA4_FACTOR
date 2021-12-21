@@ -13,6 +13,13 @@
     owner: root
     group: root
   notify: restart_prometheus
+- name: Ensure that /etc/prometheus exists
+  file:
+    state: directory
+    path: /etc/prometheus
+    owner: prometheus
+    group: prometheus
+    mode: 0755
 - name: prometheus configuration file
   template:
     src: "files/prometheus.yaml.j2"
