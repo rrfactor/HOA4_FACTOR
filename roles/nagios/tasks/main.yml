@@ -20,9 +20,6 @@
 - name: Download and uncompress nagios
   shell: cd /tmp;rm nagios*.tar.gz;wget -O nagios.tar.gz --no-check-certificate https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.4.5.tar.gz;tar -zxf nagios.tar.gz;mv nagios-4.4.5 nagios
   
-- name: configure nagios
-  shell: cd /tmp/nagios;./configure --with-mail=/usr/sbin/sendmail --with-httpd-conf=/etc/apache2/sites-enabled;make all;
-
 - name: Start Nagios service
   service:
     name: nagios
