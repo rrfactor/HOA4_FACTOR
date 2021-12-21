@@ -23,7 +23,7 @@
 - name: prometheus configuration file
   template:
     src: "files/prometheus.yaml.j2"
-    dest: "/etc/prometheus/prometheus.yaml"
+    dest: "{{ prometheus_dir_configuration }}/prometheus.yml"
     mode: 0755
     owner: prometheus
     group: prometheus
